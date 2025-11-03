@@ -36,7 +36,7 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    import bot.news_runner as news_runner
+    import news_runner
     import asyncio
     asyncio.run(news_runner.scheduler())
 
