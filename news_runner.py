@@ -1,5 +1,5 @@
 import asyncio
-from bot.main import bot, ADMIN_ID
+from main import bot, ADMIN_ID
 from parsers import steam, playstation, xbox, epic, fortnite, roblox
 from db.models import SessionLocal, News, init_db
 
