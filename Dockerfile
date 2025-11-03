@@ -1,10 +1,14 @@
+# Используем официальный Python
 FROM python:3.11-slim
 
+# Устанавливаем рабочую папку
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
+# Копируем файлы в контейнер
 COPY . .
 
-CMD ["python", "-u", "bot/main.py"]
+# Устанавливаем зависимости
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Команда запуска бота
+CMD ["python", "main.py"]
